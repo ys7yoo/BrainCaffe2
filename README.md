@@ -44,7 +44,7 @@ Under `~/src`, run the following:
 ```
 git clone https://github.com/pytorch/pytorch.git && cd pytorch
 git submodule update --init --recursive
-python setup.py install
+python3 setup.py install
 ```
 
 ## test 
