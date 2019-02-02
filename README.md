@@ -41,3 +41,6 @@ pip3 install --user \
 ## Build from source
 
 
+
+
+### Alternatively, use [Docker from Nvidia](https://docs.nvidia.com/deeplearning/dgx/caffe2-release-notes/rel_18.08.html#rel_18.08)
