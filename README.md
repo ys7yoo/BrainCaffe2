@@ -1,7 +1,7 @@
 # BrainCaffe2
 Info on installing Caffe 2
 
-# Caffe2 Installation
+# Install Caffe2 on Ubuntu (16.04 with GPUs)
 Basically, follow official instruction [here](https://caffe2.ai/docs/getting-started.html?platform=mac&configuration=prebuilt) (with some modifications).
 
 ## System libraries
