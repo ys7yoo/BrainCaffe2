@@ -36,7 +36,8 @@ pip3 install --user \
       protobuf \
       typing \
       hypothesis \
-      pyyaml
+      pyyaml \
+      pydot
 ```
 ## Build from source
 Under `~/src`, run the following:
