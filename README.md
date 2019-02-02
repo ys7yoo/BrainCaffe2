@@ -1,7 +1,7 @@
 # BrainCaffe2
 Info on installing Caffe 2
 
-# Installation
+# Caffe2 Installation
 Basically, follow official instruction [here](https://caffe2.ai/docs/getting-started.html?platform=mac&configuration=prebuilt) (with some modifications).
 
 ## System libraries
@@ -59,6 +59,10 @@ python3 caffe2/python/operator_test/activation_ops_test.py
 ```
 
 
+## Detectron installation
 
+```
+pip3 install -r requirements.txt  --user
+```
 
 ### Alternatively, use [Docker from Nvidia](https://docs.nvidia.com/deeplearning/dgx/caffe2-release-notes/rel_18.08.html#rel_18.08)
