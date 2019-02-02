@@ -1,0 +1,154 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/yyoo/src/pytorch/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_61576/fast"
+/usr/bin/make -f CMakeFiles/cmTC_61576.dir/build.make CMakeFiles/cmTC_61576.dir/build
+make[1]: Entering directory '/home/yyoo/src/pytorch/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_61576.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -fPIE   -o CMakeFiles/cmTC_61576.dir/CheckSymbolExists.c.o   -c /home/yyoo/src/pytorch/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_61576
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_61576.dir/link.txt --verbose=1
+/usr/bin/cc        CMakeFiles/cmTC_61576.dir/CheckSymbolExists.c.o  -o cmTC_61576 -rdynamic 
+CMakeFiles/cmTC_61576.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_61576.dir/build.make:97: recipe for target 'cmTC_61576' failed
+make[1]: *** [cmTC_61576] Error 1
+make[1]: Leaving directory '/home/yyoo/src/pytorch/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_61576/fast' failed
+make: *** [cmTC_61576/fast] Error 2
+
+File /home/yyoo/src/pytorch/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/yyoo/src/pytorch/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a007f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a007f.dir/build.make CMakeFiles/cmTC_a007f.dir/build
+make[1]: Entering directory '/home/yyoo/src/pytorch/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a007f.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create -fPIE   -o CMakeFiles/cmTC_a007f.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_a007f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a007f.dir/link.txt --verbose=1
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_a007f.dir/CheckFunctionExists.c.o  -o cmTC_a007f -rdynamic -lpthreads 
+/usr/bin/x86_64-linux-gnu-ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_a007f.dir/build.make:97: recipe for target 'cmTC_a007f' failed
+make[1]: *** [cmTC_a007f] Error 1
+make[1]: Leaving directory '/home/yyoo/src/pytorch/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_a007f/fast' failed
+make: *** [cmTC_a007f/fast] Error 2
+
+
+Performing C SOURCE FILE Test BLAS_F2C_DOUBLE_WORKS failed with the following output:
+Change Dir: /home/yyoo/src/pytorch/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_710f5/fast"
+/usr/bin/make -f CMakeFiles/cmTC_710f5.dir/build.make CMakeFiles/cmTC_710f5.dir/build
+make[1]: Entering directory '/home/yyoo/src/pytorch/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_710f5.dir/src.c.o
+/usr/bin/cc    -DBLAS_F2C_DOUBLE_WORKS   -o CMakeFiles/cmTC_710f5.dir/src.c.o   -c /home/yyoo/src/pytorch/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_710f5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_710f5.dir/link.txt --verbose=1
+/usr/bin/cc    -DBLAS_F2C_DOUBLE_WORKS   -rdynamic  CMakeFiles/cmTC_710f5.dir/src.c.o  -o cmTC_710f5 /usr/lib/libblas.so 
+make[1]: Leaving directory '/home/yyoo/src/pytorch/build/CMakeFiles/CMakeTmp'
+
+Return value: 1
+Source file was:
+
+#include <stdlib.h>
+#include <stdio.h>
+float x[4] = { 1, 2, 3, 4 };
+float y[4] = { .1, .01, .001, .0001 };
+int four = 4;
+int one = 1;
+extern double sdot_();
+int main() {
+  int i;
+  double r = sdot_(&four, x, &one, y, &one);
+  exit((float)r != (float).1234);
+}
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WSHORTEN_64_TO_32 failed with the following output:
+Change Dir: /home/yyoo/src/pytorch/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3de2c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3de2c.dir/build.make CMakeFiles/cmTC_3de2c.dir/build
+make[1]: Entering directory '/home/yyoo/src/pytorch/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_3de2c.dir/src.cxx.o
+/usr/bin/c++     -fvisibility-inlines-hidden  -std=c++11  -Wall  -Wextra  -Wshadow  -pedantic  -pedantic-errors -DHAVE_CXX_FLAG_WSHORTEN_64_TO_32  -Wshorten-64-to-32   -Wshorten-64-to-32 -o CMakeFiles/cmTC_3de2c.dir/src.cxx.o -c /home/yyoo/src/pytorch/build/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command line option '-Wshorten-64-to-32'
+c++: error: unrecognized command line option '-Wshorten-64-to-32'
+CMakeFiles/cmTC_3de2c.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_3de2c.dir/src.cxx.o' failed
+make[1]: *** [CMakeFiles/cmTC_3de2c.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/home/yyoo/src/pytorch/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_3de2c/fast' failed
+make: *** [cmTC_3de2c/fast] Error 2
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WD654 failed with the following output:
+Change Dir: /home/yyoo/src/pytorch/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_74cd6/fast"
+/usr/bin/make -f CMakeFiles/cmTC_74cd6.dir/build.make CMakeFiles/cmTC_74cd6.dir/build
+make[1]: Entering directory '/home/yyoo/src/pytorch/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_74cd6.dir/src.cxx.o
+/usr/bin/c++     -fvisibility-inlines-hidden  -std=c++11  -Wall  -Wextra  -Wshadow  -pedantic  -pedantic-errors  -Wfloat-equal  -fstrict-aliasing  -Wno-deprecated-declarations  -Wstrict-aliasing -DHAVE_CXX_FLAG_WD654  -wd654   -wd654 -o CMakeFiles/cmTC_74cd6.dir/src.cxx.o -c /home/yyoo/src/pytorch/build/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command line option '-wd654'
+c++: error: unrecognized command line option '-wd654'
+CMakeFiles/cmTC_74cd6.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_74cd6.dir/src.cxx.o' failed
+make[1]: *** [CMakeFiles/cmTC_74cd6.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/home/yyoo/src/pytorch/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_74cd6/fast' failed
+make: *** [cmTC_74cd6/fast] Error 2
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WTHREAD_SAFETY failed with the following output:
+Change Dir: /home/yyoo/src/pytorch/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c591c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c591c.dir/build.make CMakeFiles/cmTC_c591c.dir/build
+make[1]: Entering directory '/home/yyoo/src/pytorch/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_c591c.dir/src.cxx.o
+/usr/bin/c++     -fvisibility-inlines-hidden  -std=c++11  -Wall  -Wextra  -Wshadow  -pedantic  -pedantic-errors  -Wfloat-equal  -fstrict-aliasing  -Wno-deprecated-declarations  -Wstrict-aliasing -DHAVE_CXX_FLAG_WTHREAD_SAFETY  -Wthread-safety   -Wthread-safety -o CMakeFiles/cmTC_c591c.dir/src.cxx.o -c /home/yyoo/src/pytorch/build/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command line option '-Wthread-safety'; did you mean '-fthread-jumps'?
+c++: error: unrecognized command line option '-Wthread-safety'; did you mean '-fthread-jumps'?
+CMakeFiles/cmTC_c591c.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_c591c.dir/src.cxx.o' failed
+make[1]: *** [CMakeFiles/cmTC_c591c.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/home/yyoo/src/pytorch/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_c591c/fast' failed
+make: *** [cmTC_c591c/fast] Error 2
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test __CxxFlag__Winconsistent_missing_override failed with the following output:
+Change Dir: /home/yyoo/src/pytorch/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e84b6/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e84b6.dir/build.make CMakeFiles/cmTC_e84b6.dir/build
+make[1]: Entering directory '/home/yyoo/src/pytorch/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_e84b6.dir/src.cxx.o
+/usr/bin/c++     -fvisibility-inlines-hidden -fopenmp -D__CxxFlag__Winconsistent_missing_override   -Winconsistent-missing-override -o CMakeFiles/cmTC_e84b6.dir/src.cxx.o -c /home/yyoo/src/pytorch/build/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command line option '-Winconsistent-missing-override'; did you mean '-Wno-suggest-override'?
+CMakeFiles/cmTC_e84b6.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_e84b6.dir/src.cxx.o' failed
+make[1]: *** [CMakeFiles/cmTC_e84b6.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/home/yyoo/src/pytorch/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_e84b6/fast' failed
+make: *** [cmTC_e84b6/fast] Error 2
+
+Source file was:
+int main() { return 0; }
