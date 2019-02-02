@@ -46,10 +46,17 @@ git submodule update --init --recursive
 python setup.py install
 ```
 
-## test build
+## test 
+Check whether build was successful or not
 ```
 python3 -c 'from caffe2.python import core' 2>/dev/null && echo "Success" || echo "Failure"
 ```
+
+Test a module.
+```
+python3 caffe2/python/operator_test/activation_ops_test.py
+```
+
 
 
 
