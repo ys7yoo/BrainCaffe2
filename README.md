@@ -30,7 +30,7 @@ sudo apt-get install -y --no-install-recommends \
 ## Python packages
 
 ```
-pip install \
+pip3 install --user \
       future \
       numpy \
       protobuf \
