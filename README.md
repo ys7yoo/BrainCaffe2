@@ -45,7 +45,7 @@ Under `~/src`, run the following:
 git clone https://github.com/pytorch/pytorch.git && cd pytorch
 git checkout db5d313
 git submodule update --init --recursive
-python3 setup.py install
+CC=/usr/bin/gcc-5 CXX=/usr/bin/g++-5 python3 setup.py install
 ```
 
 ## test 
