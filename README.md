@@ -43,6 +43,7 @@ pip3 install --user \
 Under `~/src`, run the following:
 ```
 git clone https://github.com/pytorch/pytorch.git && cd pytorch
+git checkout db5d313
 git submodule update --init --recursive
 python3 setup.py install
 ```
