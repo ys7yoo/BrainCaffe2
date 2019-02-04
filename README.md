@@ -66,4 +66,13 @@ python3 caffe2/python/operator_test/activation_ops_test.py
 pip3 install -r requirements.txt  --user
 ```
 
+
+
+# Install Caffe2 on OSX (10.14 without GPUs)
+## Install Macports
+* https://www.macports.org/install.php
+* https://distfiles.macports.org/MacPorts/MacPorts-2.5.4-10.14-Mojave.pkg
+
+
+
 ### Alternatively, use [Docker from Nvidia](https://docs.nvidia.com/deeplearning/dgx/caffe2-release-notes/rel_18.08.html#rel_18.08)
