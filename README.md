@@ -125,5 +125,13 @@ MACOSX_DEPLOYMENT_TARGET=10.9 CC=clang CXX=clang++ python setup.py install
 ```
 https://github.com/pytorch/pytorch#from-source
 
+## Set up path before launch python
+```
+export DYLD_LIBRARY_PATH=`python -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())"`/caffe2/python
+```
+After using it, you can unset `DYLD_LIBRARY_PATH` by
+```
+unset DYLD_LIBRARY_PATH
+```
 
 # Alternatively, use [Docker from Nvidia](https://docs.nvidia.com/deeplearning/dgx/caffe2-release-notes/rel_18.08.html#rel_18.08)
