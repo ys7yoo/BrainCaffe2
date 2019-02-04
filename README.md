@@ -1,5 +1,5 @@
 # BrainCaffe2
-Info on installing Caffe 2
+Info on building Caffe 2 from source
 
 # Install Caffe2 on Ubuntu (16.04 with GPUs)
 Basically, follow official instruction [here](https://caffe2.ai/docs/getting-started.html?platform=mac&configuration=prebuilt) (with some modifications).
@@ -75,4 +75,4 @@ pip3 install -r requirements.txt  --user
 
 
 
-### Alternatively, use [Docker from Nvidia](https://docs.nvidia.com/deeplearning/dgx/caffe2-release-notes/rel_18.08.html#rel_18.08)
+# Alternatively, use [Docker from Nvidia](https://docs.nvidia.com/deeplearning/dgx/caffe2-release-notes/rel_18.08.html#rel_18.08)
