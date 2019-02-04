@@ -78,6 +78,13 @@ pip3 install -r requirements.txt  --user
 sudo port install cmake gflags
 ```
 
+## Seting up using conda
+``` 
+conda create -n caffe
+
+conda activate caffe
+```
+
 ## 
 https://github.com/pytorch/pytorch#from-source
 ```
