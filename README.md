@@ -79,6 +79,8 @@ sudo port install cmake gflags
 ```
 
 ## Set up python packages using conda
+
+### For python 2.7
 ``` 
 conda create -n caffe
 
@@ -92,6 +94,22 @@ conda install future \
       pyyaml \
       pydot
 ```
+
+### For Python 3.6
+``` 
+conda create -n caffe36
+
+conda activate caffe36
+
+conda install future \
+      numpy \
+      protobuf \
+      typing \
+      hypothesis \
+      pyyaml \
+      pydot
+```
+
 
 ## Get source
 ```
