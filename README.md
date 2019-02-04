@@ -73,12 +73,12 @@ pip3 install -r requirements.txt  --user
 * https://www.macports.org/install.php
 * https://distfiles.macports.org/MacPorts/MacPorts-2.5.4-10.14-Mojave.pkg
 
-## Install base packages using Macports
+## Install systempackages using Macports
 ```
 sudo port install cmake gflags
 ```
 
-## Seting up using conda
+## Set up python packages using conda
 ``` 
 conda create -n caffe
 
