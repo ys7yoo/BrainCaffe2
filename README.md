@@ -93,15 +93,19 @@ conda install future \
       pydot
 ```
 
-## 
-https://github.com/pytorch/pytorch#from-source
+## Get source
 ```
 git clone https://github.com/pytorch/pytorch.git && cd pytorch
 git submodule update --init --recursive
+```
 
+## Build and install
+
+```
 export CMAKE_PREFIX_PATH=${CONDA_PREFIX:-"$(dirname $(which conda))/../"}
 MACOSX_DEPLOYMENT_TARGET=10.9 CC=clang CXX=clang++ python3 setup.py install
 ```
+https://github.com/pytorch/pytorch#from-source
 
 
 # Alternatively, use [Docker from Nvidia](https://docs.nvidia.com/deeplearning/dgx/caffe2-release-notes/rel_18.08.html#rel_18.08)
