@@ -75,7 +75,7 @@ pip3 install -r requirements.txt  --user
 
 ## Install base packages using Macports
 ```
-sudo port install cmake openmpi gflags
+sudo port install cmake gflags
 ```
 
 ## 
