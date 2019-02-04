@@ -96,6 +96,9 @@ conda install future \
 ## 
 https://github.com/pytorch/pytorch#from-source
 ```
+git clone https://github.com/pytorch/pytorch.git && cd pytorch
+git submodule update --init --recursive
+
 export CMAKE_PREFIX_PATH=${CONDA_PREFIX:-"$(dirname $(which conda))/../"}
 MACOSX_DEPLOYMENT_TARGET=10.9 CC=clang CXX=clang++ python3 setup.py install
 ```
