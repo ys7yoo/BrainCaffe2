@@ -83,6 +83,14 @@ sudo port install cmake gflags
 conda create -n caffe
 
 conda activate caffe
+
+conda install future \
+      numpy \
+      protobuf \
+      typing \
+      hypothesis \
+      pyyaml \
+      pydot
 ```
 
 ## 
